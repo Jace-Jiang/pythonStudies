@@ -1,0 +1,2 @@
+print("learn by one")
+
