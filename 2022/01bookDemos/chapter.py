@@ -1,2 +1,0 @@
-print("learn by one")
-
