@@ -228,6 +228,30 @@ e = a + (b * c) / d      #  20 + (150/5)
 print ("a + (b * c) / d 运算结果为：",  e)
 
 
+class Solution:
+    def NumberOf1(self, n):
+        # write code here
+        cnt = 0
+        if n<0:
+            n = n & 0xffffffff
+        while n:
+            cnt+=1
+            n = (n-1) & n
+        return cnt
 
 
+#isdigit 和 isnumeric的区别?
+def dn():
+    dgt=[]
+    num=[]
+    c=0
+    for c in range(2**16):
+            ch=chr(c)
+            if ch.isdigit():dgt.append(ch)
+            if ch.isnumeric():num.append(ch)
+    print('digits:',dgt)
+    print('numeric:',num)
+print(dn())
 
+l = [i for i in range(0,15)]
+print(l[1::2])
